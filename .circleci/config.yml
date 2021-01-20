@@ -6,7 +6,7 @@ jobs:
   build-and-push:
     environment:
       DOCKER_IMAGE: phamduykhanh/hey-react
-      # DOCKER_TAG: latest
+      DOCKER_TAG: latest
     executor: docker/docker
     steps:
       - setup_remote_docker:
@@ -18,10 +18,7 @@ jobs:
       - docker/push:
           digest-path: /tmp/digest.txt
           image: $DOCKER_IMAGE
-          auth:
-            username: $DOCKER_LOGIN
-            password: $DOCKER_PASSWORD
-          # tag: $DOCKER_TAG
+          tag: $DOCKER_TAG
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"

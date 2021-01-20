@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pham Duy Khanh Version 2
+          Pham Duy Khanh Version 2 Hehe
         </a>
       </header>
     </div>

@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@3.0.0
   docker: circleci/docker@1.5.0
 jobs:
-  build-and-push:
+  - build-and-push:
     environment:
       DOCKER_IMAGE: phamduykhanh/hey-react
       DOCKER_TAG: latest
@@ -25,6 +25,11 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
+  - deploy:
+     executor: docker/docker
+     steps:
+        - run: ssh -o "StrictHostKeyChecking no" centos@phamduykhanh.com '~/docker/.deploy_hey-react.sh'
+    
 workflows:
   test-build-deploy:
     jobs:

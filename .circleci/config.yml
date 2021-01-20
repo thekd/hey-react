@@ -31,7 +31,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "b4:b2:55:fb:a6:aa:b0:56:a5:40:60:b7:e4:57:90:8b"
-      - run: ssh -o "StrictHostKeyChecking no" centos@phamduykhanh.com '~/docker/deploy_hey-react.sh'
+      - run: ssh -v -o "StrictHostKeyChecking no" centos@phamduykhanh.com '~/docker/deploy_hey-react.sh'
     
 workflows:
   test-build-deploy:

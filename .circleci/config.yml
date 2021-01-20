@@ -25,7 +25,7 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
-  - deploy:
+  deploy:
     executor: docker/docker
     steps:
         - add_ssh_keys:

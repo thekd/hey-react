@@ -36,10 +36,10 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      # - node/test
+      - node/test
       - build-and-push:
-          # requires:
-          #   - node/test
+          requires:
+            - node/test
           filters:
             branches:
               only:

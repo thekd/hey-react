@@ -15,9 +15,15 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pham Duy Khanh Version 2 Hehe
+          My react app
         </a>
       </header>
+      <body>
+          Hi There
+      </body>
+      <footer>
+
+      </footer>
     </div>
   );
 }

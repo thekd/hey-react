@@ -18,12 +18,6 @@ function App() {
           My react app
         </a>
       </header>
-      <body>
-          Hi There
-      </body>
-      <footer>
-
-      </footer>
     </div>
   );
 }

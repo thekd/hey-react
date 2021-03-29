@@ -1,20 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
+import { Card } from 'antd';
+const { Meta } = Card;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My react app
-        </a>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Card
+        hoverable
+        style={{ width: 240 }}
+        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+      >
+        <Meta title="Cloud Home" description="https://khanhpham.cloud" />
+      </Card>
     </div>
   );
 }
